@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanban Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Task Manager</h1>
+
+<div class="board">
+
+  <div class="column">
+   <h2>Draft (<span id="count-draft">0</span>)</h2>
+    <div id="draft" class="task-list"></div>
+  </div>
+
+  <div class="column">
+    <h2>In Progress (<span id="count-progress">0</span>)</h2>
+    <div id="progress" class="task-list"></div>
+  </div>
+
+  <div class="column">
+  <h2>Done (<span id="count-done">0</span>)</h2>
+    <div id="done" class="task-list"></div>
+  </div>
+
+</div>
+
+<div class="add-box">
+  <input type="text" id="taskInput" placeholder="Enter task">
+  
+  <select id="status">
+    <option value="draft">Draft</option>
+    <option value="progress">In Progress</option>
+    <option value="done">Done</option>
+  </select>
+
+  <button onclick="addTask()">Add</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
